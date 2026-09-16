@@ -20,10 +20,10 @@ export class App extends React.Component<{}, State> {
 
   // DON'T change the code below
   increase = () => {
-    this.setState(state => {
-      const nextCount = state.count + 1;
+    this.setState(({ count }) => {
+      const nextCount = count + 1;
 
-      return { count: nextCount % 5 === 0 ? nextCount + 100 : nextCount };
+      return { count: count % 5 === 0 ? nextCount + 100 : nextCount };
     });
   };
 
